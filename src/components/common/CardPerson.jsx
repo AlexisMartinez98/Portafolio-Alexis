@@ -46,7 +46,7 @@ const CardPerson = () => {
         </button>
       </a>
       <div className="profile-pic">
-        <img src="../../../src/assets/img/AlexisMartinez.jpeg" alt="" />
+        <img src="/assets/img/AlexisMartinez.jpeg" alt="" />
       </div>
       <div className="bottom">
         <div className="content">

@@ -1,7 +1,7 @@
 const projects = [
   {
     nameProject: "polirubro",
-    img: "../../src/assets/img/2.png",
+    img: "/assets/img/2.png",
     description:
       "Pagina web de renta de utileria, mobiliario, etc. para todo tipo de producción audiovisual, cine, televisión, publicidad y teatro, cualquier acción artística o evento.",
     status: "En Desarrollo",
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     nameProject: "fastdelivery",
-    img: "../../src/assets/img/3.png",
+    img: "/assets/img/3.png",
     description: "Aplicacion pensada para una empresa de repartos.",
     status: "Finalizado",
     functions: {
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     nameProject: `facundo${" "}raffa`,
-    img: "../../src/assets/img/1.png",
+    img: "/assets/img/1.png",
     description:
       "Pagina Web pensado para mostrar experiencias y promocionar guia de montaña",
     status: "Finalizado",
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     nameProject: "TMDB-ALEXIS",
-    img: "../../src/assets/img/4.png",
+    img: "/assets/img/4.png",
     description: "Pagina web para explorar películas y programas de televisión",
     status: "Finalizado",
     functions: {
@@ -102,7 +102,7 @@ const projects = [
   },
   {
     nameProject: "Objetos3D",
-    img: "../../src/assets/img/5.png",
+    img: "/assets/img/5.png",
     description: "Ecommerce administrativo",
     status: "Finalizado",
     functions: {
