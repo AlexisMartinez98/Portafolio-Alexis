@@ -1,0 +1,30 @@
+Entrada 
+1 tablero de 20 modulos metalico 
+1 caja 10 x 10
+
+c1
+9 regtangulares
+4 octogonales chica
+2 cajas 10 x 10
+1 caja mignon
+
+c2
+1 caja 10 x 10 
+6 regtangulares
+2 octogonale chica
+
+c3
+5 regtangulares chica
+1 caja 10 x 10
+
+c4 aa
+1 regtangulares chica
+
+c5 aa
+1 regtangulares chica
+
+c6 aa
+1 regtangulares chica
+
+c7 calefon
+1 regtangulares chica
