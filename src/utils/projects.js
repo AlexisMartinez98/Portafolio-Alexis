@@ -1,7 +1,13 @@
+import imagePoli from "../assets/poliRubro.png";
+import imageFast from "../assets/fastDelivery.png";
+import imageFacu from "../assets/facuRaffa.png";
+import imageTmdb from "../assets/tmdb.png";
+import imageProyect from "../assets/proyect3d.png";
+
 const projects = [
   {
     nameProject: "polirubro",
-    img: "/assets/img/2.png",
+    img: imagePoli,
     description:
       "Pagina web de renta de utileria, mobiliario, etc. para todo tipo de producción audiovisual, cine, televisión, publicidad y teatro, cualquier acción artística o evento.",
     status: "En Desarrollo",
@@ -29,7 +35,7 @@ const projects = [
   },
   {
     nameProject: "fastdelivery",
-    img: "/assets/img/3.png",
+    img: imageFast,
     description: "Aplicacion pensada para una empresa de repartos.",
     status: "Finalizado",
     functions: {
@@ -59,7 +65,7 @@ const projects = [
   },
   {
     nameProject: `facundo${" "}raffa`,
-    img: "/assets/img/1.png",
+    img: imageFacu,
     description:
       "Pagina Web pensado para mostrar experiencias y promocionar guia de montaña",
     status: "Finalizado",
@@ -76,7 +82,7 @@ const projects = [
   },
   {
     nameProject: "TMDB-ALEXIS",
-    img: "/assets/img/4.png",
+    img: imageTmdb,
     description: "Pagina web para explorar películas y programas de televisión",
     status: "Finalizado",
     functions: {
@@ -102,7 +108,7 @@ const projects = [
   },
   {
     nameProject: "Objetos3D",
-    img: "/assets/img/5.png",
+    img: imageProyect,
     description: "Ecommerce administrativo",
     status: "Finalizado",
     functions: {

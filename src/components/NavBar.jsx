@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { GoListUnordered, GoX } from "react-icons/go";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleModal } from "../redux/actions";
+import logo from "../assets/logo-cla.svg";
 
 const NavBar = () => {
   const modalOpen = useSelector((state) => state.modalOpen);
@@ -22,7 +22,7 @@ const NavBar = () => {
     <nav className="w-full h-[10vh] px-10 bg-white fixed top-0 z-50 shadow">
       <div className="w-full h-full flex items-center justify-between md:justify-around">
         <Link to="/">
-          <img src="/assets/logo-cla.svg" alt="" className="w-14" />
+          <img src={logo} alt="" className="w-14" />
         </Link>
         <div className="hidden sm:block">
           <div className="flex text-text-1">

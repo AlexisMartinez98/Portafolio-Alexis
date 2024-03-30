@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import imgPerson from "../../assets/alexisMartinez.jpeg";
 
 const CardPerson = () => {
   return (
@@ -46,7 +47,7 @@ const CardPerson = () => {
         </button>
       </a>
       <div className="profile-pic">
-        <img src="/assets/img/AlexisMartinez.jpeg" alt="" />
+        <img src={imgPerson} alt="" />
       </div>
       <div className="bottom">
         <div className="content">
