@@ -4,7 +4,7 @@ import "./index.css";
 const CardPerson = () => {
   return (
     <div className="card w-[22.5rem] h-[22.5rem] md:w-[25rem] md:h-[25rem] px-auto">
-      <a href="/src/assets/cv/AlexisMartinez-v4.pdf" download>
+      <a href="../../../src/assets/cv/AlexisMartinez-v4.pdf" download>
         <button className="mail download-button">
           <div className="docs">
             <svg
@@ -46,7 +46,7 @@ const CardPerson = () => {
         </button>
       </a>
       <div className="profile-pic">
-        <img src="../../src/assets/img/AlexisMartinez.jpeg" alt="" />
+        <img src="../../../src/assets/img/AlexisMartinez.jpeg" alt="" />
       </div>
       <div className="bottom">
         <div className="content">

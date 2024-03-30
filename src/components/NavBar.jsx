@@ -22,7 +22,7 @@ const NavBar = () => {
     <nav className="w-full h-[10vh] px-10 bg-white fixed top-0 z-50 shadow">
       <div className="w-full h-full flex items-center justify-between md:justify-around">
         <Link to="/">
-          <img src="/src/assets/logo-cla.svg" alt="" className="w-14" />
+          <img src="../../src/assets/logo-cla.svg" alt="" className="w-14" />
         </Link>
         <div className="hidden sm:block">
           <div className="flex text-text-1">
