@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactButton = () => {
   return (
-    <div className="flex gap-5 mt-5 scale-125 fixed translate-y-[900%] translate-x-[50%]">
+    <div className="flex gap-5 scale-125 fixed translate-y-[900%] translate-x-[40%]">
       <a href="https://github.com/AlexisMartinez98" target="_blank">
         <div class="group relative">
           <button>
@@ -22,6 +22,15 @@ const ContactButton = () => {
               <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5  -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4  -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6  -.6 1.2 -.5 2v3.5"></path>
             </svg>
           </button>
+          <span
+            class="absolute -top-14 left-[50%] -translate-x-[50%] 
+  z-20 origin-left scale-0 px-3 rounded-lg border 
+  border-gray-300 bg-white py-2 text-sm font-bold
+  shadow-md transition-all duration-300 ease-in-out 
+  group-hover:scale-100"
+          >
+            GitHub
+          </span>
         </div>
       </a>
 
@@ -48,6 +57,15 @@ const ContactButton = () => {
               <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
             </svg>
           </button>
+          <span
+            class="absolute -top-14 left-[50%] -translate-x-[50%] 
+  z-20 origin-left scale-0 px-3 rounded-lg border 
+  border-gray-300 bg-white py-2 text-sm font-bold
+  shadow-md transition-all duration-300 ease-in-out 
+  group-hover:scale-100"
+          >
+            Linkedin
+          </span>
         </div>
       </a>
 
@@ -71,6 +89,15 @@ const ContactButton = () => {
               <path d="M3 7l9 6l9 -6"></path>
             </svg>
           </button>
+          <span
+            class="absolute -top-14 left-[50%] -translate-x-[50%] 
+  z-20 origin-left scale-0 px-3 rounded-lg border 
+  border-gray-300 bg-white py-2 text-sm font-bold
+  shadow-md transition-all duration-300 ease-in-out 
+  group-hover:scale-100"
+          >
+            Email
+          </span>
         </div>
       </a>
     </div>

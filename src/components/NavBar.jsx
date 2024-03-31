@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { GoListUnordered, GoX } from "react-icons/go";
@@ -17,12 +17,6 @@ const NavBar = () => {
   if (modalOpen) {
     return null;
   }
-  useEffect(() => {
-    const navbar = document.getElementById("navbar");
-    if (navbar) {
-      setNavbarHeight(navbar.offsetHeight);
-    }
-  }, []);
 
   return (
     <nav className="w-full h-[10vh] px-10 bg-white ">
@@ -62,22 +56,22 @@ const NavBar = () => {
         ></div>
       )}
       <div
-        className={`h-full w-80 bg-white fixed top-0 right-0 transition-transform duration-300 transform ${
+        className={`h-full w-60 bg-white fixed top-0 right-0 transition-transform duration-300 transform ${
           open ? "translate-x-0" : "translate-x-full"
         } z-50 sm:hidden`}
       >
-        <div className="flex flex-col text-text-1 mt-8 mr-8">
+        <div className="flex flex-col text-text-1 mt-20 mr-8 gap-6">
           <NavItem number="01" sectionId="home" handleMenu={handleMenu}>
-            // Home
+            <span className="text-text-color">//</span> Home
           </NavItem>
           <NavItem number="02" sectionId="aboutMe" handleMenu={handleMenu}>
-            // Sobre Mí
+            <span className="text-text-color">//</span> Sobre Mí
           </NavItem>
           <NavItem number="03" sectionId="projects" handleMenu={handleMenu}>
-            // Proyectos
+            <span className="text-text-color">//</span> Proyectos
           </NavItem>
           <NavItem number="04" sectionId="contact" handleMenu={handleMenu}>
-            // Contacto
+            <span className="text-text-color">//</span> Contacto
           </NavItem>
         </div>
         <ContactButton />
