@@ -50,6 +50,7 @@ const Header = () => {
 
   return (
     <div
+      id="home"
       className="bg-repeat h-[100vh] flex flex-col justify-center items-center text-center px-10 md:px-0"
       style={{
         background:

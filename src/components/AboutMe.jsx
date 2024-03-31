@@ -29,7 +29,7 @@ const AboutMe = () => {
           Aquí encontrarás más información sobre mí, lo que hago y mis
           habilidades actuales de programación y tecnología.
         </h3>
-        <div className="flex items-start mt-8 gap-24 flex-col md:flex-row">
+        <div className="flex items-start mt-8 gap-24 flex-col lg:flex-row">
           <div className="flex justify-center flex-col mt-4 mx-6">
             <h4 className="text-2xl font-bold text-center md:text-start">
               Conóceme!

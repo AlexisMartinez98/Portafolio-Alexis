@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { GoListUnordered, GoX } from "react-icons/go";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import logo from "../assets/logo-cla.svg";
+import ContactButton from "./common/ContactButton";
 
 const NavBar = () => {
   const modalOpen = useSelector((state) => state.modalOpen);
-  const dispatch = useDispatch();
-
   const [open, setOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(0);
 
   const handleMenu = () => {
     setOpen(!open);
@@ -17,26 +17,32 @@ const NavBar = () => {
   if (modalOpen) {
     return null;
   }
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    if (navbar) {
+      setNavbarHeight(navbar.offsetHeight);
+    }
+  }, []);
 
   return (
-    <nav className="w-full h-[10vh] px-10 bg-white fixed top-0 z-50 shadow">
+    <nav className="w-full h-[10vh] px-10 bg-white ">
       <div className="w-full h-full flex items-center justify-between md:justify-around">
         <Link to="/">
           <img src={logo} alt="" className="w-14" />
         </Link>
         <div className="hidden sm:block">
           <div className="flex text-text-1">
-            <NavItem number="01" sectionId="home">
-              Home
+            <NavItem number="01" sectionId="home" handleMenu={handleMenu}>
+              // Home
             </NavItem>
-            <NavItem number="02" sectionId="aboutMe">
-              Sobre Mí
+            <NavItem number="02" sectionId="aboutMe" handleMenu={handleMenu}>
+              // Sobre Mí
             </NavItem>
-            <NavItem number="03" sectionId="projects">
-              Proyectos
+            <NavItem number="03" sectionId="projects" handleMenu={handleMenu}>
+              // Proyectos
             </NavItem>
-            <NavItem number="04" sectionId="contact">
-              Contacto
+            <NavItem number="04" sectionId="contact" handleMenu={handleMenu}>
+              // Contacto
             </NavItem>
           </div>
         </div>
@@ -51,7 +57,7 @@ const NavBar = () => {
       </div>
       {open && (
         <div
-          className="h-full w-full bg-black bg-opacity-50 fixed top-0 left-0 transition-opacity duration-300 z-40"
+          className="h-full w-full bg-black bg-opacity-50 md:bg-opacity-0 fixed top-0 left-0 transition-opacity duration-300 z-40"
           onClick={handleMenu}
         ></div>
       )}
@@ -62,18 +68,19 @@ const NavBar = () => {
       >
         <div className="flex flex-col text-text-1 mt-8 mr-8">
           <NavItem number="01" sectionId="home" handleMenu={handleMenu}>
-            Home
+            // Home
           </NavItem>
           <NavItem number="02" sectionId="aboutMe" handleMenu={handleMenu}>
-            Sobre Mí
+            // Sobre Mí
           </NavItem>
           <NavItem number="03" sectionId="projects" handleMenu={handleMenu}>
-            Proyectos
+            // Proyectos
           </NavItem>
           <NavItem number="04" sectionId="contact" handleMenu={handleMenu}>
-            Contacto
+            // Contacto
           </NavItem>
         </div>
+        <ContactButton />
       </div>
     </nav>
   );
@@ -85,7 +92,7 @@ const NavItem = ({ number, sectionId, children, handleMenu }) => {
       duration: 800,
       smooth: "easeInOutQuart",
     });
-    handleMenu(); // Cerrar el menú después de hacer clic en un enlace
+    handleMenu();
   };
 
   return (
