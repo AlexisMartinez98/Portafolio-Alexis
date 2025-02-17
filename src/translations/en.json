@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "hello": "HELLO",
+    "im": "I'M",
+    "developer": "Developer",
+    "description": "specialized in comprehensive website and application development. With experience in both Frontend and Backend."
+  },
+  "aboutMe": {
+    "title": "ABOUT ME",
+    "subtitle": "Here you'll find more information about me, what I do, and my current programming and technology skills.",
+    "knowMe": "Get to know me!",
+    "description1": "I'm a",
+    "role": "Full Stack Web Developer",
+    "description2": "specialized in creating interfaces for websites and applications, focused on driving product success. Explore some of my Projects in the corresponding section.",
+    "description3": "I'm passionate about sharing my achievements as a",
+    "developer": "Developer",
+    "description4": "and learnings accumulated over the years. Connect with me on",
+    "description5": ". I'm looking for job opportunities where I can contribute, learn and grow.",
+    "description6": "If you have a",
+    "job": "Job",
+    "description7": "opportunity that aligns with my skills and experience, don't hesitate to",
+    "contactMe": "contact me",
+    "description8": "!"
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "subtitle": "Here you'll find some of the most relevant projects I've worked on.",
+    "seeMore": "See more",
+    "modal": {
+      "functions": "Functions:",
+      "userMode": "User Mode",
+      "adminMode": "Admin Mode",
+      "repositories": "Repositories:",
+      "technologies": "Technologies Used:",
+      "close": "Close",
+      "inDevelopment": "In Development",
+      "completed": "Completed"
+    },
+    "descriptions": {
+      "polirubro": {
+        "description": "Website for renting props, furniture, etc. for all types of audiovisual production, cinema, television, advertising and theater, any artistic action or event.",
+        "userMode": "Users can browse through the site, accessing a wide variety of products, and can search through filters by categories, sub-categories and color",
+        "adminMode": "The administrator has the ability to add new products, edit them and delete them."
+      },
+      "fastdelivery": {
+        "description": "Application designed for a delivery company.",
+        "userMode": "Users will be the delivery drivers, who can register and log in freely and select the packages they will deliver during the workday.",
+        "adminMode": "The administrator will have access to the list of registered delivery drivers, can verify activity status, as well as view the number of assigned packages. They can create, view and edit packages."
+      },
+      "facundoraffa": {
+        "description": "Website designed to showcase experiences and promote mountain guide services",
+        "userMode": "Personal blog to showcase experiences and professional work"
+      },
+      "tmdb": {
+        "description": "Website to explore movies and TV shows",
+        "userMode": "User registration: Create an account to access customized features, Favorites list: Save your favorite movies and TV shows to your account, Advanced search: Find movies and TV shows using filters and keywords"
+      },
+      "objetos3d": {
+        "description": "Administrative ecommerce",
+        "userMode": "Users can view and purchase available objects on the web, plus create and access their account with email and password",
+        "adminMode": "The admin can view, add, edit and delete categories, products and will have the ability to add admin accounts and control all user accounts"
+      }
+    }
+  },
+  "skills": {
+    "title": "My skills!"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "description": "I am currently looking for new job opportunities. If you want to get in touch, don't hesitate to contact me."
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

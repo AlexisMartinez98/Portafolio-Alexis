@@ -97,20 +97,61 @@ button:hover .button-text {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(5px);
+  z-index: 1000;
 }
 
 .modal-content {
-  background: #fafafa;
   padding: 20px;
   border-radius: 8px;
-  max-width: 90%;
-  max-height: 95%;
+  width: 95%;
+  max-width: 1200px;
+  max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 15px;
+    margin: 10px;
+    width: 98%;
+  }
+}
+
+/* Personalizar la barra de desplazamiento */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+:root[class='dark'] .modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+:root[class='dark'] .modal-content {
+  background: #1a1a1a;
+  color: white;
+}
+
+:root[class='light'] .modal-content {
+  background: #fafafa;
+  color: black;
 }
 
 /* botonRepositorio */

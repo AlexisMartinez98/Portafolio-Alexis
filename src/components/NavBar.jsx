@@ -1,42 +1,75 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { GoListUnordered, GoX } from "react-icons/go";
-import { useSelector } from "react-redux";
+import { BsSun, BsMoon } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { toggleTheme, toggleLanguage } from "../redux/actions";
 import logo from "../assets/logo-cla.svg";
 import ContactButton from "./common/ContactButton";
 
 const NavBar = () => {
+  const { t, i18n } = useTranslation();
+  const dispatch = useDispatch();
   const modalOpen = useSelector((state) => state.modalOpen);
+  const theme = useSelector((state) => state.theme);
+  const language = useSelector((state) => state.language);
   const [open, setOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+    i18n.changeLanguage(language);
+  }, [theme, language]);
 
   const handleMenu = () => {
     setOpen(!open);
   };
+
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+  };
+
+  const handleLanguageToggle = () => {
+    dispatch(toggleLanguage());
+  };
+
   if (modalOpen) {
     return null;
   }
 
   return (
-    <nav className="w-full h-[10vh] px-10 bg-white ">
-      <div className="w-full h-full flex items-center justify-between md:justify-around">
+    <nav className={`w-full h-[10vh] px-10 ${theme === 'light' ? 'bg-white' : 'bg-gray-900'}`}>
+      <div className="w-full h-full flex items-center justify-between md:justify-around relative">
         <Link to="/">
           <img src={logo} alt="" className="w-14" />
         </Link>
-        <div className="hidden sm:block">
+        <div className="hidden sm:flex items-center gap-4">
+          <button
+            onClick={handleThemeToggle}
+            className={`p-2 rounded-full ${theme === 'light' ? 'text-gray-800' : 'text-white'} hover:bg-gray-200 dark:hover:bg-gray-700`}
+          >
+            {theme === 'light' ? <BsMoon size={20} /> : <BsSun size={20} />}
+          </button>
+          <button
+            onClick={handleLanguageToggle}
+            className={`px-2 py-1 rounded ${theme === 'light' ? 'text-gray-800' : 'text-white'} hover:bg-gray-200 dark:hover:bg-gray-700`}
+          >
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
           <div className="flex text-text-1">
             <NavItem number="01" sectionId="home" handleMenu={handleMenu}>
               // Home
             </NavItem>
             <NavItem number="02" sectionId="aboutMe" handleMenu={handleMenu}>
-              // Sobre Mí
+              // {t('nav.about')}
             </NavItem>
             <NavItem number="03" sectionId="projects" handleMenu={handleMenu}>
-              // Proyectos
+              // {t('nav.projects')}
             </NavItem>
             <NavItem number="04" sectionId="contact" handleMenu={handleMenu}>
-              // Contacto
+              // {t('nav.contact')}
             </NavItem>
           </div>
         </div>
@@ -55,8 +88,8 @@ const NavBar = () => {
           onClick={handleMenu}
         ></div>
       )}
-      <div
-        className={`h-full w-60 bg-white fixed top-0 right-0 transition-transform duration-300 transform ${
+        <div
+          className={`h-full w-60 ${theme === 'light' ? 'bg-white' : 'bg-gray-900'} fixed top-0 right-0 transition-transform duration-300 transform ${
           open ? "translate-x-0" : "translate-x-full"
         } z-50 sm:hidden`}
       >
@@ -65,13 +98,13 @@ const NavBar = () => {
             <span className="text-text-color">//</span> Home
           </NavItem>
           <NavItem number="02" sectionId="aboutMe" handleMenu={handleMenu}>
-            <span className="text-text-color">//</span> Sobre Mí
+            <span className="text-text-color">//</span> {t('nav.about')}
           </NavItem>
           <NavItem number="03" sectionId="projects" handleMenu={handleMenu}>
-            <span className="text-text-color">//</span> Proyectos
+            <span className="text-text-color">//</span> {t('nav.projects')}
           </NavItem>
           <NavItem number="04" sectionId="contact" handleMenu={handleMenu}>
-            <span className="text-text-color">//</span> Contacto
+            <span className="text-text-color">//</span> {t('nav.contact')}
           </NavItem>
         </div>
         <ContactButton />

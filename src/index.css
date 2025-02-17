@@ -2,6 +2,100 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --background: #fafafa;
+  --text: #1a1a1a;
+  --primary: #7843e9;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --text: #fafafa;
+  --primary: #7843e9;
+}
+
+/* Efectos de neón */
+.neon-text {
+  text-shadow: 0 0 10px var(--primary),
+               0 0 20px var(--primary),
+               0 0 30px var(--primary),
+               0 0 40px var(--primary);
+}
+
+.neon-box {
+  box-shadow: 0 0 5px var(--primary),
+              0 0 10px var(--primary),
+              0 0 15px var(--primary);
+}
+
+/* Efecto de distorsión */
+.hover-distort {
+  filter: url('#distortion');
+}
+
+/* Efecto de glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Cursor personalizado */
+* {
+  cursor: none !important;
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(100%); }
+  50% { filter: brightness(150%); }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* SVG para el efecto de distorsión */
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
 body {
-  background-color: #fafafa;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.text-text-1 {
+  color: var(--text);
+}
+
+/* Ajustes para el tema oscuro */
+.dark .bg-white {
+  background-color: #1a1a1a;
+}
+
+.dark .text-gray-700 {
+  color: #fafafa;
+}
+
+.dark .hover\:bg-gray-200:hover {
+  background-color: #2d2d2d;
 }

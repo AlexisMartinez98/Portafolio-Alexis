@@ -8,14 +8,11 @@ const projects = [
   {
     nameProject: "polirubro",
     img: imagePoli,
-    description:
-      "Pagina web de renta de utileria, mobiliario, etc. para todo tipo de producción audiovisual, cine, televisión, publicidad y teatro, cualquier acción artística o evento.",
+    translationKey: "polirubro",
     status: "En Desarrollo",
     functions: {
-      modeUser:
-        "El usuario puede navegar a travez del sitio, accediendo a una amplia variedad de productos, puede realizar busquedas a travez de filtros por categorias, sub-categorias y color",
-      modeAdmin:
-        "El administrador tiene la posibilidad de agregar productos nuevos, editarlos y elimimarlos.",
+      modeUser: true,
+      modeAdmin: true
     },
     repositoryLinks: {
       front: "https://github.com/gerpag/polirubroProps-front",
@@ -36,13 +33,11 @@ const projects = [
   {
     nameProject: "fastdelivery",
     img: imageFast,
-    description: "Aplicacion pensada para una empresa de repartos.",
+    translationKey: "fastdelivery",
     status: "Finalizado",
     functions: {
-      modeUser:
-        "Los usuarios van a ser los repartidores, los cuales podrán registrarse y loguearse libremente y seleccionar los paquetes que entregarán durante la jornada de trabajo.",
-      modeAdmin:
-        "El administrador tendrá acceso a la lista de repartidores registrados, podrá verificar el estado de actividad, así también visualizar la cant de paquetes asignados. Podrá crear, visualizar y editar los paquetes.",
+      modeUser: true,
+      modeAdmin: true
     },
     repositoryLinks: {
       front: "https://github.com/AlexisMartinez98/fastDelivery-backoffice",
@@ -66,12 +61,10 @@ const projects = [
   {
     nameProject: `facundo${" "}raffa`,
     img: imageFacu,
-    description:
-      "Pagina Web pensado para mostrar experiencias y promocionar guia de montaña",
+    translationKey: "facundoraffa",
     status: "Finalizado",
     functions: {
-      modeUser:
-        "Blog personal para mostrar experiencias y trabajos realizados por profesional",
+      modeUser: true
     },
     repositoryLinks: {
       front: "https://github.com/AlexisMartinez98/Desafios-DesarrolloWeb",
@@ -83,11 +76,10 @@ const projects = [
   {
     nameProject: "TMDB-ALEXIS",
     img: imageTmdb,
-    description: "Pagina web para explorar películas y programas de televisión",
+    translationKey: "tmdb",
     status: "Finalizado",
     functions: {
-      modeUser:
-        "Registro de usuarios: Crea una cuenta para acceder a funciones personalizadas ,Lista de favoritos: Guarda tus películas y programas de televisión favoritos en tu cuenta ,Búsqueda avanzada: Encuentra películas y programas de televisión utilizando filtros y palabras clave",
+      modeUser: true
     },
     repositoryLinks: {
       front: "https://github.com/AlexisMartinez98/tmdb_alexis",
@@ -109,13 +101,11 @@ const projects = [
   {
     nameProject: "Objetos3D",
     img: imageProyect,
-    description: "Ecommerce administrativo",
+    translationKey: "objetos3d",
     status: "Finalizado",
     functions: {
-      modeUser:
-        "El usuario puede visualizar y comprar los objetos disponibles en la web, ademas la creacion y acceso a su cuenta con correo y contraseña",
-      modeAdmin:
-        "El admin podra ver, agregar, editar y eliminar categorias, productos y tendra la posibilidad de agregar cuentas admin y controlar todas las cuentas de usuarios",
+      modeUser: true,
+      modeAdmin: true
     },
     repositoryLinks: {
       front: "https://github.com/AlexisMartinez98/Project-3D",
